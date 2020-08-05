@@ -43,23 +43,27 @@ navLinks.forEach((link) => {
   });
 });
 
-//Get the form
-let form = document.getElementById("myForm");
-//Get the button that opens the form
-let btn = document.getElementById("myBtn");
-//Get the <span> element that closes the form
-let span = document.getElementsByClassName("close");
-//When the user clicks the button hire me, open the form
-btn.addEventListener("click", function () {
-  form.style.display = "flex";
-});
-// When the user clicks on <span> (x), close the form
-span[0].addEventListener("click", function () {
-  form.style.display = "none";
-});
-// When the user clicks anywhere outside of the form, close it
-form.addEventListener("click", function (event) {
-  if (event.target == form) {
-    form.style.display = "none";
+//Jquery animation skill bars
+$(document).ready(function () {
+
+  var offsetTop = $(".skills").offset().top;
+  var offsetBottom = offsetTop + $(".skills").height();
+
+  if ($(window).scrollTop() + $(".skills").height() > offsetTop && $(window).scrollTop() < offsetBottom) {
+    $(".skill-active").each(function () {
+      var $this = $(this);
+      var per = $this.attr("per");
+      $this.css("width", per + "%");
+    });
   }
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(".skills").height() > offsetTop && $(window).scrollTop() < offsetBottom) {
+      $(".skill-active").each(function () {
+        var $this = $(this);
+        var per = $this.attr("per");
+        $this.css("width", per + "%");
+      });
+    }
+  });
 });
