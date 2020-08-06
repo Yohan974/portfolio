@@ -9,7 +9,7 @@ body {
   color: #5a5a5a;
   font-size: 1.6rem;
 }
-section {
+section, footer {
   text-align: center;
   padding: 5rem 1.5rem;
 }
@@ -31,6 +31,7 @@ h2 {
 }
 
 h3 {
+  color: #3677fd;
   text-transform: uppercase;
   padding-top: 3rem;
 }
@@ -86,7 +87,7 @@ header.active{
   position: fixed;
   right: 0;
   top: 0;
-  background: rgba(0, 195, 255, 0.5);
+  background: rgba(117, 236, 240, 0.5);
   padding: 1.2rem;
   border-radius: 0% 0% 0% 40%;
 }
@@ -181,27 +182,37 @@ header.active{
   background-color: white;
   color: #3677fd;
 }
-.btn-secondary {
-  background: linear-gradient(to right, #3677fd, #00c3ff);
-  color: white;
+.btn-primary:hover {
+  background: none;
+  color: #fff;
+  box-shadow: 0px 0px 12px -2px #fff;
 }
+
+.btn-secondary {
+  background: #75b5f1;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: none;
+  color: #3677fd;
+  box-shadow: 0px 0px 12px -2px #000;
+}
+
 
 /*section landing-page*/
 .landing-page {
-  background: linear-gradient(to right,#3677fd, #00c3ff);
+  background: linear-gradient(to right,#747EF1, #75ECF0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .landing-page p {
   color: white;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
-
 .roundedImage {
   margin-top: 2rem;
   height: 22rem;
@@ -218,7 +229,6 @@ header.active{
 .skills{
   width: 100%;
 }
-
 .skill-name {
   text-align: start;
   color: #3677fd;
@@ -232,50 +242,94 @@ header.active{
 }
 .skill-active {
   height: 15px;
-  background: linear-gradient(to right, #3692ff, #3677fd);
+  background: linear-gradient(to right, #75ECF0, #747EF1);
   border-radius: 8px;
   width: 0;
   transition: 1.5s ease-in-out;
   position: relative;
 }
-
-/*section Services*/
-
-.service {
-  color: #3677fd;
-  padding-top: 2.5rem;
+.skills .skill:nth-child(1) .skill-active {
+  background: linear-gradient(to right, #74EF8C, #75B3EE);
+}
+.skills .skill:nth-child(2) .skill-active {
+  background: linear-gradient(to right, #75ECF0, #747EF1);
+}
+.skills .skill:nth-child(3) .skill-active {
+  background: linear-gradient(to right, #76B2EE, #AF78ED);
+}
+.skills .skill:nth-child(4) .skill-active {  
+  background: linear-gradient(to right, #9391FC, #EC77C8);
+}
+.skills .skill:nth-child(5) .skill-active {
+  background: linear-gradient(to right, #B274EF, #EF758A);
 }
 
-.service-img {
-  border: 1px solid gray;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  margin: auto;
+/*section Services*/
+.services {
+  background-color: #f1f8ff;
+}
+.service {
+  padding-top: 2.5rem;
 }
 i {
   margin: auto;
-  background: linear-gradient(to right, #3692ff 0%, #3677fd 100%);
+  background: linear-gradient(to right, #3692ff, #3677fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 /*section projects*/
 .projects{
-  background: linear-gradient(to right, #3677fd, #00c3ff);
+  background: linear-gradient(to right, #747EF1, #75ECF0);
 }
 .projects h2 {
   color: white;
 }
 .project-content {
-  transition: transform 1s;
+  position: relative;
+  transition: all 0.5s;
   padding: 0;
 }
 .project-content:hover {
   box-shadow: 0 0 10px 1px rgba(0,0,0,.3);
-  transform: scale(1.1);
   z-index: 1;
+  background-color: #000;
+  transform: scale(1.1);
+}
+.project-image{
+  opacity: 1;
+  transition: all 0.5s;
+}
+.project-content:hover .project-image {
+  opacity: 0.3;
+}
+.project-description {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.project-description h4 {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.project-description i {
+  background: #fff;
+  -webkit-background-clip: text;
+}
+.project-description p {
+  color: #fff;
+  font-weight: lighter;
+}
+.project-content:hover .project-description {
+  opacity: 1;
 }
 
 /*Experience*/
@@ -287,10 +341,8 @@ i {
 
 /*footer*/
 footer{
-  background: url('../images/dev.jpg') no-repeat fixed bottom;
-  background-color: #f1f8ff;
+  background: linear-gradient(to right, #747EF1, #75ECF0);
   min-height: 700px;
-  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -304,10 +356,33 @@ footer a {
   color: inherit;
 }
 footer i {
-  background: white;
+  background: #fff;
   -webkit-background-clip: text;
 }
-.social{
-  position: absolute;
-  bottom: 3rem;
+
+/* Add styles to the form container */
+.form-container {
+  min-width: 50%;
+  max-width: 90%;
+  margin: 5rem auto;
+  padding: 1.5rem 0;
+  background-color: white;
+  border-radius: 10px;
+}
+.form-container h2 {
+  color: #3677fd;
+}
+input, textarea {
+  font-family: "Lato", "Open sans", "sans-serif";
+  width: 70%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 0.5px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+}
+input:focus, textarea:focus {
+  border-color: #3677fd;
+  border-width: 1px;
 }
