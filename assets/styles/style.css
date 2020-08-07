@@ -5,13 +5,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  background-color: #fff;
   font-family: "Lato", "Open sans", "sans-serif";
   color: #5a5a5a;
   font-size: 1.6rem;
 }
 section, footer {
   text-align: center;
-  padding: 5rem 1.5rem;
+  padding: 5rem 0;
 }
 
 h1 {
@@ -31,30 +32,25 @@ h2 {
 }
 
 h3 {
-  color: #3677fd;
+  font-weight: bold;
   text-transform: uppercase;
   padding-top: 3rem;
 }
 
 p {
   color: #5a5a5a;
-  padding: 1rem 0 2rem;
-  margin: auto;
   line-height: 3rem;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 a {
   text-decoration: none !important;
   color: #5a5a5a;
 }
 
 /*Header*/
-
 header {
   width: 100%;
   position: fixed;
@@ -73,14 +69,12 @@ header.active{
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .line1, .line2, .line3 {
   width: 30px;
   height: 2px;
   margin: 6px 0;
   background: white;
 }
-
 .burger-menu-icon {
   cursor: pointer;
   z-index: 999;
@@ -91,7 +85,6 @@ header.active{
   padding: 1.2rem;
   border-radius: 0% 0% 0% 40%;
 }
-
 .profile-pic {
   height: 9rem;
   width: auto;
@@ -99,11 +92,6 @@ header.active{
   display: block;
   margin: 1.5rem 0;
 }
-
-.caption {
-  display: block;
-}
-
 .nav-list {
   width: 24rem;
   height: 100vh;
@@ -187,7 +175,6 @@ header.active{
   color: #fff;
   box-shadow: 0px 0px 12px -2px #fff;
 }
-
 .btn-secondary {
   background: #75b5f1;
   color: #fff;
@@ -198,15 +185,10 @@ header.active{
   box-shadow: 0px 0px 12px -2px #000;
 }
 
-
 /*section landing-page*/
 .landing-page {
   background: linear-gradient(to right,#747EF1, #75ECF0);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .landing-page p {
   color: white;
@@ -233,15 +215,15 @@ header.active{
   text-align: start;
   color: #3677fd;
   text-transform: uppercase;
-  margin: 15px 0;
+  margin: 1.5rem 0;
 }
 .skill-bar {
-  height: 15px;
+  height: 10px;
   background: #cacaca;
   border-radius: 8px;
 }
 .skill-active {
-  height: 15px;
+  height: 10px;
   background: linear-gradient(to right, #75ECF0, #747EF1);
   border-radius: 8px;
   width: 0;
@@ -249,24 +231,86 @@ header.active{
   position: relative;
 }
 .skills .skill:nth-child(1) .skill-active {
-  background: linear-gradient(to right, #74EF8C, #75B3EE);
+  /* background: linear-gradient(to right, #74EF8C, #75B3EE); */
+  background: linear-gradient(to right, #75ECF0, #747EF1);
+
 }
 .skills .skill:nth-child(2) .skill-active {
   background: linear-gradient(to right, #75ECF0, #747EF1);
 }
 .skills .skill:nth-child(3) .skill-active {
-  background: linear-gradient(to right, #76B2EE, #AF78ED);
+  /* background: linear-gradient(to right, #76B2EE, #AF78ED); */
+  background: linear-gradient(to right, #75ECF0, #747EF1);
+
 }
 .skills .skill:nth-child(4) .skill-active {  
-  background: linear-gradient(to right, #9391FC, #EC77C8);
+  /* background: linear-gradient(to right, #9391FC, #EC77C8); */
+  background: linear-gradient(to right, #75ECF0, #747EF1);
+
 }
 .skills .skill:nth-child(5) .skill-active {
-  background: linear-gradient(to right, #B274EF, #EF758A);
+  /* background: linear-gradient(to right, #B274EF, #EF758A); */
+  background: linear-gradient(to right, #75ECF0, #747EF1);
+
 }
 
+/*Section frameworks*/
+.skill-circle {
+  margin-top: 5rem;
+}
+.skills .skill-circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.skills .skill-circle svg circle {
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 10;
+  transform: translate(5px,5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+.skills .skill-circle svg .circle-bar
+{
+  stroke-dashoffset: 0;
+  stroke: #cacaca;
+}
+.skills .skill-circle:nth-child(1) svg .circle-active
+{
+  stroke-dashoffset: calc(440 - (440 * 75) / 100);
+  stroke: url(#linearColors1);
+}
+.skills .skill-circle:nth-child(2) svg .circle-active
+{
+  stroke-dashoffset: calc(440 - (440 * 80) / 100);
+  stroke: url(#linearColors2);
+}
+.skills .skill-circle:nth-child(3) svg .circle-active
+{
+  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke: url(#linearColors3);
+}
+.skills .skill-circle:nth-child(4) svg .circle-active
+{
+  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke: url(#linearColors4);
+}
+.skills .skill-circle .skill-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 /*section Services*/
 .services {
-  background-color: #f1f8ff;
+  max-width: 1200px;
 }
 .service {
   padding-top: 2.5rem;
@@ -333,6 +377,9 @@ i {
 }
 
 /*Experience*/
+.experience {
+  max-width: 1200px;
+}
 .card-img-top {
   width: 150px;
   height: 150px;
@@ -340,20 +387,11 @@ i {
 }
 
 /*footer*/
-footer{
+.contact{
   background: linear-gradient(to right, #747EF1, #75ECF0);
-  min-height: 700px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-footer h2 {
+.footer h2 {
   color: white;
-}
-footer a {
-  color: inherit;
 }
 footer i {
   background: #fff;
@@ -368,9 +406,6 @@ footer i {
   padding: 1.5rem 0;
   background-color: white;
   border-radius: 10px;
-}
-.form-container h2 {
-  color: #3677fd;
 }
 input, textarea {
   font-family: "Lato", "Open sans", "sans-serif";

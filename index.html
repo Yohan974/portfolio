@@ -48,13 +48,13 @@
               <a href="#about" class="nav-link">À propos</a>
             </li>
             <li class="nav-item">
-              <a href="#services" class="nav-link">Compétences</a>
+              <a href="#services" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
               <a href="#projects" class="nav-link">Projets</a>
             </li>
             <li class="nav-item">
-              <a href="#clients" class="nav-link">Expérience</a>
+              <a href="#experience" class="nav-link">Expérience</a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link">Contact</a>
@@ -71,7 +71,7 @@
     </header>
 
     <main>
-      <section class="landing-page row" id="landing-page">
+      <section class="landing-page d-flex flex-column row" id="landing-page">
         <div>
           <img src="assets/images/yf.jpg" alt="" class="roundedImage" />
           <h1>Yohan Fontaine</h1>
@@ -83,7 +83,7 @@
       </section>
 
       <!--Section About-->
-      <section class="about row" id="about">
+      <section class="about row justify-content-center" id="about">
         <div class="aboutMe col-md-6">
           <h2>À Propos</h2>
           <p>
@@ -98,7 +98,7 @@
             application de to do list en JavaScript et son framework Vue.js.
           </p>
         </div>
-        <div class="skills align-self-center col-md-6">
+        <div class="skills align-self-center col-10 col-md-5">
           <div class="skill">
             <div class="skill-name">html / Css</div>
             <div class="skill-bar">
@@ -130,19 +130,73 @@
             </div>
           </div>
         </div>
+        <div class="skills row justify-content-center">
+          <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
+            <svg>
+              <defs>
+                <linearGradient id="linearColors1">
+                  <stop offset="0%" stop-color="#9391FC"></stop>
+                  <stop offset="100%" stop-color="#EC77C8"></stop>
+                </linearGradient>
+              </defs>
+              <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skill-name">Bootstrap</div>
+          </div>
+          <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
+            <svg>
+              <defs>
+                <linearGradient id="linearColors2">
+                  <stop offset="0%" stop-color="#74EF8C"></stop>
+                  <stop offset="100%" stop-color="#75B3EE"></stop>
+                </linearGradient>
+              </defs>
+              <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skill-name">Vue.js</div>
+          </div>
+          <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
+            <svg>
+              <defs>
+                <linearGradient id="linearColors3">
+                  <stop offset="0%" stop-color="#76B2EE"></stop>
+                  <stop offset="100%" stop-color="#AF78ED"></stop>
+                </linearGradient>
+              </defs>
+              <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skill-name">Symfony</div>
+          </div>
+          <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
+            <svg>
+              <defs>
+                <linearGradient id="linearColors4">
+                  <stop offset="0%" stop-color="#F0778A"></stop>
+                  <stop offset="100%" stop-color="#EFA775"></stop>
+                </linearGradient>
+              </defs>
+              <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skill-name">Spring</div>
+          </div>
+        </div>
       </section>
 
       <!--Section Services-->
-      <section class="services row" id="services">
-        <h2>Compétences</h2>
-        <div class="service col-md-4 mx-auto">
+      <section class="services row justify-content-center mx-auto" id="services">
+        <h2>Mes services</h2>
+        <div class="service col-sm-6 col-md-4">
           <i class="fas fa-mobile-alt fa-3x"></i>
           <h3>application mobile</h3>
           <p>
-            Conception d'une application mobile Android organisée en couche.
+            Concevoir une application mobile Android organisée en couche.
           </p>
         </div>
-        <div class="service col-md-4 mx-auto">
+        <div class="service col-sm-6 col-md-4">
           <i class="fas fa-database fa-3x"></i>
           <h3>Base de données</h3>
           <p>
@@ -150,28 +204,28 @@
             dans le langage d’une base de données.
           </p>
         </div>
-        <div class="service col-md-4 mx-auto">
+        <div class="service col-sm-6 col-md-4">
           <i class="fas fa-code fa-3x"></i>
           <h3>développement web</h3>
           <p>
             Développer la partie front-end et back-end d’un site respectant les standards du Web et responsive.
           </p>
         </div>
-        <div class="service col-md-4 mx-auto">
+        <div class="service col-sm-6 col-md-4">
           <i class="fas fa-rocket fa-3x"></i>
           <h3>Gestion de projet</h3>
           <p>
             Collaborer à la gestion d’un projet, de l’analyse des besoins à la mise en ligne (Méthode agile).
           </p>
         </div>
-        <div class="service col-md-4 mx-auto">
+        <div class="service col-sm-6 col-md-4">
           <i class="fas fa-desktop fa-3x"></i>
           <h3>Logiciel</h3>
           <p>
             Développer une interface de type desktop avec Java.
           </p>
         </div>
-        <div class="service col-md-4 mx-auto">
+        <div class="service col-sm-6 col-md-4">
           <i class="fas fa-project-diagram fa-3x"></i>
           <h3>Modélisation</h3>
           <p>
@@ -183,7 +237,7 @@
       <!--Section Projects-->
       <section class="projects row justify-content-center" id="projects">
         <h2>Mes Projets</h2>
-        <article class="project-content col-sm-6 col-lg-4">
+        <article class="project-content col-sm-6 col-lg-4 col-xl-3">
           <img src="assets/images/index_smartlife.jpg" alt="Smartlife" class="project-image" />
           <div class="project-description">
             <h4>Smartlife</h4>
@@ -191,7 +245,7 @@
             <p>E-Commerce - PHP - Symfony</p>
           </div>
         </article>
-        <article class="project-content col-sm-6 col-lg-4">
+        <article class="project-content col-sm-6 col-lg-4 col-xl-3">
           <img src="assets/images/velvetRecord.jpg" alt="Velvet Records" class="project-image" />
           <div class="project-description">
             <h4>Velvet Records</h4>
@@ -199,7 +253,7 @@
             <p>PHP - MVC - POO</p>
           </div>
         </article>
-        <article class="project-content col-sm-6 col-lg-4">
+        <article class="project-content col-sm-6 col-lg-4 col-xl-3">
           <img src="assets/images/toDoList.jpg" alt="To do list" class="project-image" />
           <div class="project-description">
             <h4>To do list</h4>
@@ -209,7 +263,7 @@
         </article>
       </section>
 
-      <section class="clients" id="clients" data-interval="false">
+      <section class="experience" id="experience" data-interval="false">
         <h2>Expérience</h2>
         <div class="card-deck">
           <div class="card border-0">
@@ -234,7 +288,7 @@
       </section>
 
       <!--Footer-->
-      <footer class="contact row" id="contact">
+      <footer class="contact d-flex flex-column row" id="contact">
         <div class="footer">
           <h2>
             Besoin d'un <strong>développeur</strong>? Pour plus d'informations
