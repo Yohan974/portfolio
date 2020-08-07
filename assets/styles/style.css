@@ -189,6 +189,7 @@ header.active{
 .landing-page {
   background: linear-gradient(to right,#747EF1, #75ECF0);
   min-height: 100vh;
+  vertical-align: middle;
 }
 .landing-page p {
   color: white;
