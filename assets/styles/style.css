@@ -232,27 +232,19 @@ header.active{
   position: relative;
 }
 .skills .skill:nth-child(1) .skill-active {
-  /* background: linear-gradient(to right, #74EF8C, #75B3EE); */
-  background: linear-gradient(to right, #75ECF0, #747EF1);
-
+  background: linear-gradient(to right, #74EF8C, #75B3EE);
 }
 .skills .skill:nth-child(2) .skill-active {
   background: linear-gradient(to right, #75ECF0, #747EF1);
 }
 .skills .skill:nth-child(3) .skill-active {
-  /* background: linear-gradient(to right, #76B2EE, #AF78ED); */
-  background: linear-gradient(to right, #75ECF0, #747EF1);
-
+  background: linear-gradient(to right, #76B2EE, #AF78ED);
 }
 .skills .skill:nth-child(4) .skill-active {  
-  /* background: linear-gradient(to right, #9391FC, #EC77C8); */
-  background: linear-gradient(to right, #75ECF0, #747EF1);
-
+  background: linear-gradient(to right, #9391FC, #EC77C8);
 }
 .skills .skill:nth-child(5) .skill-active {
-  /* background: linear-gradient(to right, #B274EF, #EF758A); */
-  background: linear-gradient(to right, #75ECF0, #747EF1);
-
+  background: linear-gradient(to right, #B274EF, #EF758A);
 }
 
 /*Section frameworks*/
