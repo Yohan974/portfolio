@@ -41,29 +41,34 @@
           <ul class="nav-list">
             <li class="nav-item">
               <a href="#landing-page">
-                <img src="assets/images/yf.jpg" alt="Yohan Fontaine" class="profile-pic nav-link" />
+                <img src="assets/images/yf.jpg" alt="Yohan Fontaine" class="profile-pic nav-link onclick animated" />
               </a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link">À propos</a>
+              <a href="#about" class="nav-link onclick animated" data-language="aboutNav">À propos</a>
             </li>
             <li class="nav-item">
-              <a href="#services" class="nav-link">Services</a>
+              <a href="#services" class="nav-link onclick animated" data-language="servicesNav">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#projects" class="nav-link">Projets</a>
+              <a href="#projects" class="nav-link onclick animated" data-language="projectsNav">Projets</a>
             </li>
             <li class="nav-item">
-              <a href="#experience" class="nav-link">Expérience</a>
+              <a href="#experience" class="nav-link onclick animated" data-language="experiences">Expérience</a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link onclick animated" data-language="contactNav">Contact</a>
             </li>
-            <li class="nav-item social-icons">
-              <a href="https://fr.linkedin.com/in/yohan-fontaine-615920138?" target="_blank" class="nav-link">
-                <i class="fab fa-linkedin fa-3x"></i></a>
-              <a href="https://github.com/Yohan974" target="_blank" class="nav-link">
-                <i class="fab fa-github fa-3x"></i></a>
+            <li class="nav-item dropup">
+              <a href="#" class="nav-link animated dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a href="#en" class="nav-link onclick dropdown-item" language="en">English</a>
+                <a href="#es" class="nav-link onclick dropdown-item" language="es">Español</a>
+                <a href="#fr" class="nav-link onclick dropdown-item" language="fr">Français</a>
+              </div>
             </li>
           </ul>
         </nav>
@@ -75,27 +80,21 @@
         <div>
           <img src="assets/images/yf.jpg" alt="" class="roundedImage" />
           <h1>Yohan Fontaine</h1>
-          <p>
+          <p data-language="jobTitle">
             Concepteur Développeur d'applications
           </p>
-          <a href="#contact" class="btn btn-primary">Contactez-moi</a>
+          <a href="#contact" class="btn btn-primary" data-language="contactBtn">Contactez-moi</a>
         </div>
       </section>
 
       <!--Section About-->
       <section class="about row justify-content-center" id="about">
         <div class="aboutMe col-md-6">
-          <h2>À Propos</h2>
-          <p>
-            Aprés 10 ans d'ancienneté en tant que technicien polyvalent, je décide en
-            2020 de changer radicalement de cursus afin de pouvoir pleinement
-            exercer ma passion pour le développement web. Actuellement en
-            formation de concepteur développeur d'applications, je souhaite
-            enrichir mon parcours professionnel au travers d'une première
-            expérience. C'est pourquoi je suis à la recherche d'un stage de
-            développeur. Dans le cadre de ma formation, nous travaillons actuellement en équipe sur un projet de site
-            E-commerce en PHP. Je réalise également un projet personel d'une
-            application de to do list en JavaScript et son framework Vue.js.
+          <h2 data-language="about">À Propos</h2>
+          <p data-language="aboutDescription">
+            Passionné par le développement web depuis plus de 3 ans, je conçois et maintiens des sites web aussi bien
+            coté serveur (Back-end) que coté client (Front-end, UX / UI). Je développe aussi en Java, ce qui me permet
+            de développer des applications android.
           </p>
         </div>
         <div class="skills align-self-center col-10 col-md-5">
@@ -134,52 +133,34 @@
           <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
             <svg>
               <defs>
-                <linearGradient id="linearColors1">
-                  <stop offset="0%" stop-color="#9391FC"></stop>
-                  <stop offset="100%" stop-color="#EC77C8"></stop>
-                </linearGradient>
-              </defs>
-              <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
-              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
-            </svg>
-            <div class="skill-name">Bootstrap</div>
-          </div>
-          <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
-            <svg>
-              <defs>
-                <linearGradient id="linearColors2">
+                <linearGradient id="linearColors">
                   <stop offset="0%" stop-color="#74EF8C"></stop>
                   <stop offset="100%" stop-color="#75B3EE"></stop>
                 </linearGradient>
               </defs>
               <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
-              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70" per="80"></circle>
+            </svg>
+            <div class="skill-name">Bootstrap</div>
+          </div>
+          <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
+            <svg>
+              <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70" per="50"></circle>
             </svg>
             <div class="skill-name">Vue.js</div>
           </div>
           <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
             <svg>
-              <defs>
-                <linearGradient id="linearColors3">
-                  <stop offset="0%" stop-color="#76B2EE"></stop>
-                  <stop offset="100%" stop-color="#AF78ED"></stop>
-                </linearGradient>
-              </defs>
               <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
-              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70" per="75"></circle>
             </svg>
             <div class="skill-name">Symfony</div>
           </div>
           <div class="skill-circle col-sm-6 col-md-3 col-lg-2">
             <svg>
-              <defs>
-                <linearGradient id="linearColors4">
-                  <stop offset="0%" stop-color="#F0778A"></stop>
-                  <stop offset="100%" stop-color="#EFA775"></stop>
-                </linearGradient>
-              </defs>
               <circle class="circle-bar" cx="70" cy="70" r="70"></circle>
-              <circle class="circle-active" cx="70" cy="70" r="70"></circle>
+              <circle class="circle-active" cx="70" cy="70" r="70" per="20"></circle>
             </svg>
             <div class="skill-name">Spring</div>
           </div>
@@ -188,47 +169,49 @@
 
       <!--Section Services-->
       <section class="services row justify-content-center mx-auto" id="services">
-        <h2>Mes services</h2>
+        <h2 data-language="services">Services</h2>
         <div class="service col-sm-6 col-md-4">
           <i class="fas fa-mobile-alt fa-3x"></i>
-          <h3>application mobile</h3>
-          <p>
-            Concevoir une application mobile Android organisée en couche.
+          <h3 data-language="application">application mobile</h3>
+          <p data-language="appDescription">
+            Concevoir une application native Android, avec le language de programmation Java.
           </p>
         </div>
         <div class="service col-sm-6 col-md-4">
           <i class="fas fa-database fa-3x"></i>
-          <h3>Base de données</h3>
-          <p>
+          <h3 data-language="database">Base de données</h3>
+          <p data-language="dbDescription">
             Concevoir, mettre en place et développer les composants
             dans le langage d’une base de données.
           </p>
         </div>
         <div class="service col-sm-6 col-md-4">
           <i class="fas fa-code fa-3x"></i>
-          <h3>développement web</h3>
-          <p>
-            Développer la partie front-end et back-end d’un site respectant les standards du Web et responsive.
+          <h3 data-language="development">développement web</h3>
+          <p data-language="devDescription">
+            Développer la partie back-end d’un site respectant les standards du Web et adaptable à tous les types de
+            supports.
           </p>
         </div>
         <div class="service col-sm-6 col-md-4">
           <i class="fas fa-rocket fa-3x"></i>
-          <h3>Gestion de projet</h3>
-          <p>
-            Collaborer à la gestion d’un projet, de l’analyse des besoins à la mise en ligne (Méthode agile).
+          <h3 data-language="manageProject">Gestion de projet</h3>
+          <p data-language="manageProjectDescription">
+            Collaborer à la gestion d’un projet, de l’analyse des besoins à la mise en ligne en adoptant une méthode
+            agile (Scrum).
           </p>
         </div>
         <div class="service col-sm-6 col-md-4">
           <i class="fas fa-desktop fa-3x"></i>
-          <h3>Logiciel</h3>
-          <p>
-            Développer une interface de type desktop avec Java.
+          <h3 data-language="software">Logiciel</h3>
+          <p data-language="softwareDescription">
+            Développer une interface utilisateur de type desktop avec JavaFX.
           </p>
         </div>
         <div class="service col-sm-6 col-md-4">
           <i class="fas fa-project-diagram fa-3x"></i>
-          <h3>Modélisation</h3>
-          <p>
+          <h3 data-language="conception">Modélisation</h3>
+          <p data-language="conceptionDescription">
             Modéliser une application avec UML. Modéliser une base de données relationnelles avec Merise.
           </p>
         </div>
@@ -236,7 +219,7 @@
 
       <!--Section Projects-->
       <section class="projects row justify-content-center" id="projects">
-        <h2>Mes Projets</h2>
+        <h2 data-language="projects">Mes Projets</h2>
         <article class="project-content col-sm-6 col-lg-4 col-xl-3">
           <img src="assets/images/index_smartlife.jpg" alt="Smartlife" class="project-image" />
           <div class="project-description">
@@ -263,7 +246,7 @@
         </article>
       </section>
 
-      <section class="experience row justify-content-center mx-auto" id="experience" data-interval="false">
+      <!-- <section class="experience row justify-content-center mx-auto" id="experience" data-interval="false">
         <h2>Expérience</h2>
         <div class="card-deck">
           <div class="card border-0">
@@ -285,25 +268,26 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!--Footer-->
       <footer class="contact d-flex flex-column row" id="contact">
         <div class="footer">
-          <h2>
+          <h2 data-language="contactDescription">
             Besoin d'un <strong>développeur</strong>? Pour plus d'informations
           </h2>
-          <a href="assets/images/cv-cda.pdf" target="_blank" class="btn btn-primary">Télecharger mon CV</a>
+          <a href="assets/images/cv-cda.pdf" target="_blank" class="btn btn-primary"
+            data-language="downloadCV">Télecharger mon CV</a>
         </div>
         <form name="contact" method="POST" class="form-container" data-netlify="true">
-          <h2>Contactez-moi</h2>
+          <h2 data-language="contact">Contactez-moi</h2>
           <label for="name"></label>
-          <input type="text" placeholder="Nom" name="name" id="name" required />
+          <input type="text" placeholder="Nom" name="name" id="name" data-language="name" required />
           <label for="email"></label>
           <input type="email" placeholder="Email" name="email" id="email" required />
           <label for="message"></label>
-          <textarea rows="8" placeholder="Message" name="message" id="message"></textarea><br />
-          <button type="submit" class="btn btn-secondary">Envoyer</button>
+          <textarea rows="8" placeholder="Message" name="message" id="message" data-language="message"></textarea><br />
+          <button type="submit" class="btn btn-secondary" data-language="sendBtn">Envoyer</button>
         </form>
         <div>
           <a href="https://fr.linkedin.com/in/yohan-fontaine-615920138?" target="_blank"><i
@@ -326,7 +310,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
-  <script src="assets/javascript/main.js"></script>
+  <script type="module" src="assets/javascript/main.js"></script>
 </body>
 
 </html>
