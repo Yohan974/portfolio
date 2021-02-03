@@ -237,7 +237,7 @@ header.active{
   position: relative;
 }
 .skills .skill-active {
-  background: linear-gradient(to right, #74EF8C, #75B3EE);
+  background: #75B3EE;
 }
 
 /*Section frameworks*/
