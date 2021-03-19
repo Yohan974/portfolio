@@ -286,3 +286,40 @@ $(document).ready(function () {
     }
   });
 });
+
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyAlEd6hPXb4h_1Qk0w81lmmDf_dtFb64I4",
+  authDomain: "portfolio-72ff6.firebaseapp.com",
+  databaseURL: "https://portfolio-72ff6-default-rtdb.firebaseio.com",
+  projectId: "portfolio-72ff6",
+  storageBucket: "portfolio-72ff6.appspot.com",
+  messagingSenderId: "1076786792713",
+  appId: "1:1076786792713:web:50537f356e6321709cabd8"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const projectsList = document.getElementById("projects");
+
+const projectsRef = firebase.database().ref('projects');
+projectsRef.on('value', (snapshot) => {
+  const data = snapshot.val();
+  for (let project in data) {
+    const item = `<article class="project-content col-sm-6 col-lg-4 col-xl-3">
+                    <img src="${data[project]['imgUrl']}" alt="${data[project]['title']}" class="project-image" />
+                    <div class="project-description">
+                      <h4>${data[project]['title']}</h4>
+                      <a href="${data[project]['githubUrl']}" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                      <p>${data[project]['description']}</p>
+                    </div>
+                  </article>`;
+    const position = "beforeend";
+
+    projectsList.insertAdjacentHTML(position, item);
+  }
+
+});
+
+
